@@ -19,6 +19,7 @@ func main() {
 	for scanner.Scan() {
 		line := scanner.Text()
 		split := strings.Split(line, ":")
+
 		rangeChar := split[0]
 		str := split[1]
 		str = strings.TrimSpace(str)
