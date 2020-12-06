@@ -21,8 +21,8 @@ func main() {
 		line := scanner.Text()
 		firsPart := line[:len(line)-3]
 		secondPart := line[len(line)-3:]
-		firsPartBinary := intToBinary(strings.ReplaceAll(strings.ReplaceAll(firsPart, "B", "1"), "F", "0"))
-		secondPartBinary := intToBinary(strings.ReplaceAll(strings.ReplaceAll(secondPart, "R", "1"), "L", "0"))
+		firsPartBinary := IntToBinary(strings.ReplaceAll(strings.ReplaceAll(firsPart, "B", "1"), "F", "0"))
+		secondPartBinary := IntToBinary(strings.ReplaceAll(strings.ReplaceAll(secondPart, "R", "1"), "L", "0"))
 		if firsPartBinary*8+secondPartBinary > max {
 			max = firsPartBinary*8 + secondPartBinary
 		}
@@ -31,7 +31,7 @@ func main() {
 
 }
 
-func intToBinary(part string) int64 {
-	interger, _ := strconv.ParseInt(part, 2, 64)
-	return interger
+func IntToBinary(part string) int64 {
+	integer, _ := strconv.ParseInt(part, 2, 64)
+	return integer
 }
